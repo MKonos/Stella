@@ -1,0 +1,4 @@
+Deliverables
+  - build canvas view that planets will be drawn on (Sunday 2/26 by 10pm) Estimate: 1.5 hours
+  - allow for rescaling of planets using buttons (can use dummy planets) (Sunday 3/5 by 10 pm) Estimate: 1 hr
+  - create button to view information about specific planet (Sunday 3/5 by 10 pm) Estimate: 1 hr
