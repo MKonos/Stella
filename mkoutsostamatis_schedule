@@ -1,0 +1,5 @@
+Schedule:
+	- create a class that handles html interactions with the NASA JPL server ( 2 hours )
+	- Create a function that takes information from the NASA JPL server and places it locally in data structures or each planet( 2 hours)
+	- Make a class that displays information about each planet in the solar system and displays it when the user selects a planet | Sat 3/4 by 6 pm (1 hour)
+
