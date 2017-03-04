@@ -1,5 +1,5 @@
 Schedule and deliverable:
-	- creating a planet class named planets.java |Sun 2/26 by 6 pm ( 1 hour )
-	- creating a class for each of the planets, which extend the planet class, so jupiter.java, moon.java etc. | Wed 3/1 by 6 pm ( 2 hours)
-	- making a 2d represntation for the planets, by making shapes as pictures that resemble the planets, so jupiter.png, moon.jpg etc. | Sat 3/4 by 6 pm ( 2 hours )
+	- creating a planet class named planets.java |Sun 3/4 by 6 pm ( 1 hour )
+	- creating a class for each of the planets, which extend the planet class, so jupiter.java, moon.java etc. | Wed 3/15 by 6 pm ( 2 hours)
+	- making a 2d represntation for the planets, by making shapes as pictures that resemble the planets, so jupiter.png, moon.jpg etc. | Sat 3/18 by 6 pm ( 2 hours )
 
