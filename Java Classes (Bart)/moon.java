@@ -9,4 +9,9 @@ public class moon
 	{
 		
 	}
+	
+	public void display()
+	{
+		// display the moon 
+	}
 }

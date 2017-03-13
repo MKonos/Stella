@@ -9,4 +9,9 @@ public class planet
 	{
 		
 	}
+	
+	public int setPlanetInfo(String planetName,double size,double radius,double velocity,double location)
+	{
+		return 1; // planet "made"
+	}
 }
