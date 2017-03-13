@@ -17,7 +17,12 @@ public class sun
 	
 	public void display()
 	{
+		
 			// display the sun 
+		if(true)
+			return 1;
+		else
+			return 0;
 	
 	}
 	
