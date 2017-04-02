@@ -31,7 +31,5 @@ public class HomeActivity extends AppCompatActivity {
 
         //display populated list view
         planetList.setAdapter(aryAdapter);
-
-
     }
 }

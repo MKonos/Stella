@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="viralandroid.com.androidlistviewwithimageandtext.ListViewWithImageAndText">
+    tools:context="uic.stella.edu.stella.HomeActivity">
 
     <ListView
         android:id="@+id/list_view"
