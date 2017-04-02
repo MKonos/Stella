@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/background_light"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/small_earth"
+        app:srcCompat="@drawable/earth"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
 

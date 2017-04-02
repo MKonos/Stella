@@ -14,19 +14,19 @@ public class ListViewWithImageAndText extends AppCompatActivity {
 
     // Array of strings for ListView Title
     String[] listviewTitle = new String[]{
-            "ListView Title 1", "ListView Title 2", "ListView Title 3", "ListView Title 4",
-            "ListView Title 5", "ListView Title 6", "ListView Title 7", "ListView Title 8",
+            "Jupiter", "Mars", "Mercury", "Neptune",
+            "Saturn", "Earth", "Uranus", "Venus",
     };
 
 
     int[] listviewImage = new int[]{
-            R.drawable.mars, R.drawable.mars, R.drawable.mars, R.drawable.mars,
-            R.drawable.mars, R.drawable.mars, R.drawable.mars, R.drawable.mars,
+            R.drawable.jupiter, R.drawable.mars, R.drawable.mercury, R.drawable.neptune,
+            R.drawable.saturn, R.drawable.earth, R.drawable.uranus, R.drawable.venus,
     };
 
     String[] listviewShortDescription = new String[]{
-            "Android ListView Short Description", "Android ListView Short Description", "Android ListView Short Description", "Android ListView Short Description",
-            "Android ListView Short Description", "Android ListView Short Description", "Android ListView Short Description", "Android ListView Short Description",
+            "", "", "", "",
+            "", "", "", "",
     };
 
     @Override
