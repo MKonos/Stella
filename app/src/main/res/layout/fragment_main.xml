@@ -6,21 +6,11 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="uic.stella.edu.stella.RealHomeActivity$PlaceholderFragment">
+    tools:context="uic.stella.edu.stella.MainActivity$PlaceholderFragment">
 
     <TextView
         android:id="@+id/section_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/section_label"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="89dp"
-        android:layout_toEndOf="@+id/section_label"
-        android:text="ToggleButton" />
 
 </RelativeLayout>
