@@ -22,5 +22,6 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getTargetContext();
 
         assertEquals("uic.stella.edu.stella", appContext.getPackageName());
+        //HELLO
     }
 }
