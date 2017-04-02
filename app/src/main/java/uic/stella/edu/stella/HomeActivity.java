@@ -2,7 +2,7 @@ package uic.stella.edu.stella;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-// this is Bart's comment 
+// this is Bart's comment
 public class HomeActivity extends AppCompatActivity {
 
     @Override
