@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
 
         setTitle("Planet Select");
 
-        //display populated listview
+        //display populated list view
         planetList.setAdapter(aryAdapter);
 
 
