@@ -2,7 +2,7 @@
     <string name="app_name">Stella</string>
 
 
-    //colors
+    //Planets
     <string-array name="planets">
         <item>Mercury</item>
         <item>Venus</item>
