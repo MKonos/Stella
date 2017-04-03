@@ -1,3 +1,4 @@
+
 package uic.stella.edu.stella;
 
 import android.support.design.widget.TabLayout;
@@ -18,6 +19,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,14 +57,14 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
     }
 
@@ -91,11 +94,11 @@ public class MainActivity extends AppCompatActivity {
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class Tab1Diagram extends Fragment {
+    /*public static class Tab1Diagram extends Fragment {
         /**
          * The fragment argument representing the section number for this
          * fragment.
-         */
+         *//*
         private static final String ARG_SECTION_NUMBER = "section_number";
 
         public Tab1Diagram() {
@@ -104,24 +107,24 @@ public class MainActivity extends AppCompatActivity {
         /**
          * Returns a new instance of this fragment for the given section
          * number.
-         */
+         *//*
         public static Tab1Diagram newInstance(int sectionNumber) {
             Tab1Diagram fragment = new Tab1Diagram();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
             return fragment;
-        }
+        }*/
 
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+        //@Override
+        /*public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.activity_listview_with_image_and_text, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
-        }
-    }
+        }*/
+
 
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
@@ -140,10 +143,10 @@ public class MainActivity extends AppCompatActivity {
 
             switch (position) {
                 case 0:
-                    Tab1Diagram tab1 = new Tab1Diagram();
+                    ListViewWithImageAndText tab1 = new ListViewWithImageAndText();
                     return tab1;
                 case 1:
-                    Tab1Diagram tab2 = new Tab1Diagram();
+                    ListViewWithImageAndText tab2 = new ListViewWithImageAndText();
                     return tab2;
                 default:
                     return null;

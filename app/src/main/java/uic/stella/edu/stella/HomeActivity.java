@@ -1,4 +1,5 @@
-package uic.stella.edu.stella;
+
+/*package uic.stella.edu.stella;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,3 +34,4 @@ public class HomeActivity extends AppCompatActivity {
         planetList.setAdapter(aryAdapter);
     }
 }
+*/
