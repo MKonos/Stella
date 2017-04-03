@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -54,9 +55,16 @@ public class DisplayPlanet extends AppSettings{
 
         spAppSettings = getSharedPreferences(APP_SETTINGS, Context.MODE_PRIVATE);
 
+        Bundle bundle = getIntent().getExtras();
+        String message = bundle.getString("thePlanet");
+
+        Toast.makeText(this, message,
+                Toast.LENGTH_SHORT).show();
+
        // final SharedPreferences.Editor editor = (spAppSettings.edit()); // incase we need to change values
 
-       myPlanet = spAppSettings.getString(current_planet, "");
+       //myPlanet = spAppSettings.getString(current_planet, "");
+        myPlanet = "jupiter";
 
         listviewImage = new int[]{
                 R.drawable.mercury, R.drawable.venus, R.drawable.earth, R.drawable.mars,

@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 
 //import static uic.stella.edu.stella.AppSettings.APP_SETTINGS;
+import static android.R.id.message;
 import static uic.stella.edu.stella.AppSettings.current_planet;
 
 
@@ -101,10 +102,6 @@ public class ListViewWithImageAndText extends Fragment {
 
             planetListView = (ListView) fragmentView.findViewById(R.id.list_view);
 
-
-
-
-
             for (int i = 0; i < 8; i++) {
                 HashMap<String, String> hm = new HashMap<String, String>();
                 hm.put("listview_title", listviewTitle[i]);
@@ -137,12 +134,12 @@ public class ListViewWithImageAndText extends Fragment {
                 //ListView tv = (ListView) view.findViewById(R.id.list_view);
                 planetSelected = androidListView.getItemAtPosition(position).toString();
 
-                Toast.makeText(getActivity(), planetSelected,
-                        Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), planetSelected,
+                        //Toast.LENGTH_SHORT).show();
 
-                //Intent i = new Intent(getActivity(), DisplayPlanet.class);
-                //startActivity(i);
-                //((Activity) getActivity()).overridePendingTransition(0,0);
+                Intent myIntent = new Intent(view.getContext(), DisplayPlanet.class);
+                myIntent.putExtra("thePlanet", planetSelected);
+                startActivity(myIntent);
 
                 if (planetSelected.equals("Jupiter")) {
                     //editor.putString(current_planet, "");
