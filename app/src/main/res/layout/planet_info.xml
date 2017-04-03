@@ -25,19 +25,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Planet Name:"
+        android:layout_marginTop="26dp"
         android:layout_below="@+id/imageView"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="27dp" />
-
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Planet Name:"
-        android:layout_alignBaseline="@+id/textView"
-        android:layout_alignBottom="@+id/textView"
         android:layout_alignParentStart="true" />
+
 
     <TextView
         android:id="@+id/textView11"
@@ -62,14 +53,6 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView3"
         android:text="Moons:" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView4"
-        android:text="Orbit Distance:" />
 
     <TextView
         android:id="@+id/textView15"
@@ -135,9 +118,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Orbit Distance:"
-        android:layout_alignBaseline="@+id/textView14"
-        android:layout_alignBottom="@+id/textView14"
-        android:layout_alignParentStart="true" />
+        android:layout_alignBaseline="@+id/textView23"
+        android:layout_alignBottom="@+id/textView23"
+        android:layout_alignEnd="@+id/textView17"
+        android:layout_toEndOf="@+id/textView11" />
 
     <TextView
         android:id="@+id/textView6"
@@ -152,7 +136,7 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Temperature:     "
+        android:text="Temperature:    "
         android:layout_alignBaseline="@+id/textView16"
         android:layout_alignBottom="@+id/textView16"
         android:layout_toEndOf="@+id/textView11" />
@@ -161,7 +145,7 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Discovery Date:"
+        android:text="Discovery Date:  "
         android:layout_alignBaseline="@+id/textView17"
         android:layout_alignBottom="@+id/textView17"
         android:layout_alignParentStart="true" />
@@ -191,7 +175,7 @@
         android:text="@string/hold"
         android:layout_below="@+id/textView19"
         android:layout_alignStart="@+id/textView19"
-        android:layout_alignEnd="@+id/textView19" />
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/textView21"
@@ -200,7 +184,7 @@
         android:text="@string/hold"
         android:layout_below="@+id/textView20"
         android:layout_alignStart="@+id/textView20"
-        android:layout_alignEnd="@+id/textView20" />
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/textView22"
@@ -209,16 +193,17 @@
         android:text="@string/hold"
         android:layout_below="@+id/textView21"
         android:layout_alignStart="@+id/textView21"
-        android:layout_alignEnd="@+id/textView21" />
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hold"
+        android:layout_marginTop="18dp"
         android:layout_below="@+id/textView22"
-        android:layout_alignStart="@+id/textView22"
-        android:layout_alignEnd="@+id/textView22" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/textView24" />
 
     <TextView
         android:id="@+id/textView24"
@@ -226,8 +211,9 @@
         android:layout_height="wrap_content"
         android:text="@string/hold"
         android:layout_below="@+id/textView23"
-        android:layout_alignStart="@+id/textView23"
-        android:layout_alignEnd="@+id/textView23" />
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView7"
+        android:layout_alignStart="@+id/textView25" />
 
     <TextView
         android:id="@+id/textView25"
@@ -235,8 +221,8 @@
         android:layout_height="wrap_content"
         android:text="@string/hold"
         android:layout_below="@+id/textView24"
-        android:layout_alignEnd="@+id/textView24"
-        android:layout_toEndOf="@+id/textView7" />
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/textView26"
@@ -244,8 +230,8 @@
         android:layout_height="wrap_content"
         android:text="@string/hold"
         android:layout_below="@+id/textView25"
-        android:layout_alignEnd="@+id/textView25"
-        android:layout_toEndOf="@+id/textView7" />
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textView8" />
 
     <TextView
         android:id="@+id/textView27"
@@ -253,8 +239,8 @@
         android:layout_height="wrap_content"
         android:text="@string/hold"
         android:layout_below="@+id/textView26"
-        android:layout_alignStart="@+id/textView26"
-        android:layout_alignEnd="@+id/textView26" />
+        android:layout_alignEnd="@+id/textView26"
+        android:layout_toEndOf="@+id/textView8" />
 
 
 </RelativeLayout>

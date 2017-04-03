@@ -56,17 +56,17 @@ public class DisplayPlanet extends AppSettings{
         spAppSettings = getSharedPreferences(APP_SETTINGS, Context.MODE_PRIVATE);
 
         Bundle bundle = getIntent().getExtras();
-        String message = bundle.getString("thePlanet");
+        myPlanet = bundle.getString("thePlanet");
 
         setTitle("*SELECTED PLANET*");
 
-        Toast.makeText(this, message,
-                Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(this, message,
+            //    Toast.LENGTH_SHORT).show();
 
        // final SharedPreferences.Editor editor = (spAppSettings.edit()); // incase we need to change values
 
        //myPlanet = spAppSettings.getString(current_planet, "");
-        myPlanet = "jupiter";
+
 
         listviewImage = new int[]{
                 R.drawable.mercury, R.drawable.venus, R.drawable.earth, R.drawable.mars,
@@ -105,21 +105,21 @@ public class DisplayPlanet extends AppSettings{
 
     public int locationInArray()
     {
-        if(myPlanet.equals("mercury"))
+        if(myPlanet.toLowerCase().contains("mercury"))
             return 0;
-        if(myPlanet.equals("venus"))
+        if(myPlanet.toLowerCase().contains("venus"))
             return 1;
-        if(myPlanet.equals("earth"))
+        if(myPlanet.toLowerCase().contains("earth"))
             return 2;
-        if(myPlanet.equals("mars"))
+        if(myPlanet.toLowerCase().contains("mars"))
             return 3;
-        if(myPlanet.equals("jupiter"))
+        if(myPlanet.toLowerCase().contains("jupiter"))
             return 4;
-        if(myPlanet.equals("saturn"))
+        if(myPlanet.toLowerCase().contains("saturn"))
             return 5;
-        if(myPlanet.equals("uranus"))
+        if(myPlanet.toLowerCase().contains("uranus"))
             return 6;
-        if(myPlanet.equals("neptune"))
+        if(myPlanet.toLowerCase().contains("neptune"))
             return 7;
 
         return -1; // not a valid name
