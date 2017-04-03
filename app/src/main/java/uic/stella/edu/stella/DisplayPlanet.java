@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -29,8 +30,10 @@ public class DisplayPlanet extends AppSettings{
     TextView EffectiveTemperature;
     TextView DiscoveryDate;
     TextView DiscoveredBy;
+    ImageView planetPicture;
     SharedPreferences spAppSettings;
 
+    int[] listviewImage;
     String myPlanet;
     String[] by;
     String[] date;
@@ -54,7 +57,7 @@ public class DisplayPlanet extends AppSettings{
 
        myPlanet = spAppSettings.getString(current_planet, "");
 
-        int[] listviewImage = new int[]{
+        listviewImage = new int[]{
                 R.drawable.mercury, R.drawable.venus, R.drawable.earth, R.drawable.mars,
                 R.drawable.jupiter, R.drawable.saturn, R.drawable.uranus, R.drawable.neptune,
         };
@@ -77,6 +80,7 @@ public class DisplayPlanet extends AppSettings{
 
     public void assignValues()
     {
+        planetPicture = (ImageView) findViewById(R.id.imageView);
         PlanetName = (TextView) findViewById(R.id.textView19);
         EquatorialDiameter = (TextView) findViewById(R.id.textView20);
         Mass = (TextView) findViewById(R.id.textView21);
@@ -121,6 +125,8 @@ public class DisplayPlanet extends AppSettings{
         EffectiveTemperature.setText(temp[location]);
         DiscoveryDate.setText(date[location]);
         DiscoveredBy.setText(by[location]);
+        planetPicture.setImageResource(listviewImage[location]);
+
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
