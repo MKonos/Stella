@@ -26,7 +26,7 @@ public class DisplayPlanet extends AppSettings{
     TextView Moons;
     TextView OrbitDistance;
     TextView OrbitPeriod;
-    TextView effectiveTemperature;
+    TextView EffectiveTemperature;
     TextView DiscoveryDate;
     TextView DiscoveredBy;
     SharedPreferences spAppSettings;
@@ -83,7 +83,7 @@ public class DisplayPlanet extends AppSettings{
         Moons = (TextView) findViewById(R.id.textView22);
         OrbitDistance = (TextView) findViewById(R.id.textView23);
         OrbitPeriod = (TextView) findViewById(R.id.textView24);
-        effectiveTemperature = (TextView) findViewById(R.id.textView25);
+        EffectiveTemperature = (TextView) findViewById(R.id.textView25);
         DiscoveryDate = (TextView) findViewById(R.id.textView26);
         DiscoveredBy = (TextView) findViewById(R.id.textView27);
     }
@@ -107,18 +107,21 @@ public class DisplayPlanet extends AppSettings{
         if(myPlanet.equals("neptune"))
             return 7;
 
-
-
         return -1; // not a valid name
     }
 
     public void printValues(int location)
     {
         PlanetName.setText(planetNames[location]);
-
+        EquatorialDiameter.setText(diameter[location]);
+        Mass.setText(mass[location]);
+        Moons.setText(moons[location]);
+        OrbitDistance.setText(planetNames[location]);
+        OrbitPeriod.setText(planetNames[location]);
+        EffectiveTemperature.setText(temp[location]);
+        DiscoveryDate.setText(date[location]);
+        DiscoveredBy.setText(by[location]);
     }
-
-
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
