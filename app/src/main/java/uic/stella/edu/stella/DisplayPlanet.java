@@ -58,6 +58,8 @@ public class DisplayPlanet extends AppSettings{
         Bundle bundle = getIntent().getExtras();
         String message = bundle.getString("thePlanet");
 
+        setTitle("*SELECTED PLANET*");
+
         Toast.makeText(this, message,
                 Toast.LENGTH_SHORT).show();
 

@@ -1,9 +1,8 @@
 <resources>
     <string name="app_name">Stella</string>
 
-
     //Planets
-    <string name ="hold">Place holder</string>
+    <string name="hold">Place holder</string>
     <string-array name="planets">
         <item>Mercury</item>
         <item>Venus</item>
@@ -99,5 +98,7 @@
     <string name="title_activity_home">HomeActivity</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Stella</string>
+    <string name="appwidget_text">EARTH!</string>
+    <string name="add_widget">Add widget</string>
 </resources>
