@@ -32,6 +32,15 @@ public class DisplayPlanet extends AppSettings{
     SharedPreferences spAppSettings;
 
     String myPlanet;
+    String[] by;
+    String[] date;
+    String[] temp;
+    String[] period;
+    String[] distance;
+    String[] moons;
+    String[] mass;
+    String[] diameter;
+    String[] planetNames;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,31 +50,75 @@ public class DisplayPlanet extends AppSettings{
 
         spAppSettings = getSharedPreferences(APP_SETTINGS, Context.MODE_PRIVATE);
 
-        final SharedPreferences.Editor editor = (spAppSettings.edit());
-
+       // final SharedPreferences.Editor editor = (spAppSettings.edit()); // incase we need to change values
 
        myPlanet = spAppSettings.getString(current_planet, "");
-
-
-
-
 
         int[] listviewImage = new int[]{
                 R.drawable.mercury, R.drawable.venus, R.drawable.earth, R.drawable.mars,
                 R.drawable.jupiter, R.drawable.saturn, R.drawable.uranus, R.drawable.neptune,
         };
 
-        String[] planetNames = getResources().getStringArray(R.array.planets);
-        String[] diamaters = getResources().getStringArray(R.array.diameter);
-        String[] mass = getResources().getStringArray(R.array.mass);
-        String[] moons = getResources().getStringArray(R.array.moons);
-        String[] distance = getResources().getStringArray(R.array.orbitD);
-        String[] period = getResources().getStringArray(R.array.orbitP);
-        String[] temp = getResources().getStringArray(R.array.temp);
-        String[] date = getResources().getStringArray(R.array.record);
-        String[] by = getResources().getStringArray(R.array.by);
+
+        planetNames = getResources().getStringArray(R.array.planets);
+        diameter = getResources().getStringArray(R.array.diameter);
+        mass = getResources().getStringArray(R.array.mass);
+        moons = getResources().getStringArray(R.array.moons);
+        distance = getResources().getStringArray(R.array.orbitD);
+        period = getResources().getStringArray(R.array.orbitP);
+        temp = getResources().getStringArray(R.array.temp);
+        date = getResources().getStringArray(R.array.record);
+        by = getResources().getStringArray(R.array.by);
+
+        assignValues();
+        int location = locationInArray();
+        printValues(location);
+    }
+
+    public void assignValues()
+    {
+        PlanetName = (TextView) findViewById(R.id.textView19);
+        EquatorialDiameter = (TextView) findViewById(R.id.textView20);
+        Mass = (TextView) findViewById(R.id.textView21);
+        Moons = (TextView) findViewById(R.id.textView22);
+        OrbitDistance = (TextView) findViewById(R.id.textView23);
+        OrbitPeriod = (TextView) findViewById(R.id.textView24);
+        effectiveTemperature = (TextView) findViewById(R.id.textView25);
+        DiscoveryDate = (TextView) findViewById(R.id.textView26);
+        DiscoveredBy = (TextView) findViewById(R.id.textView27);
+    }
+
+    public int locationInArray()
+    {
+        if(myPlanet.equals("mercury"))
+            return 0;
+        if(myPlanet.equals("venus"))
+            return 1;
+        if(myPlanet.equals("earth"))
+            return 2;
+        if(myPlanet.equals("mars"))
+            return 3;
+        if(myPlanet.equals("jupiter"))
+            return 4;
+        if(myPlanet.equals("saturn"))
+            return 5;
+        if(myPlanet.equals("uranus"))
+            return 6;
+        if(myPlanet.equals("neptune"))
+            return 7;
+
+
+
+        return -1; // not a valid name
+    }
+
+    public void printValues(int location)
+    {
+        PlanetName.setText(planetNames[location]);
 
     }
+
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
