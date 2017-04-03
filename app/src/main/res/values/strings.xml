@@ -12,8 +12,88 @@
         <item>Saturn</item>
         <item>Uranus</item>
         <item>Neptune</item>
-        <item>Pluto</item>
     </string-array>
+    <string-array name="diameter">
+        <item>4,879 km</item>
+        <item>12,104 km</item>
+        <item>12,756 km</item>
+        <item>6,792 km</item>
+        <item>142,984 km</item>
+        <item>120,536 km</item>
+        <item>51,118 km</item>
+        <item>49,528 km</item>
+    </string-array>
+    <string-array name="mass">
+        <item>3.30 x 10^23 kg (5.5% Earth)</item>
+        <item>4.87 x 10^24 kg (81.5% Earth)</item>
+        <item>5.97 x 10^24 kg</item>
+        <item>6.42 x 10^23 kg (10.7% Earth)</item>
+        <item>1.90 × 10^27 kg (318 Earths)</item>
+        <item>5.68 × 10^26 kg (95 Earths)</item>
+        <item>8.68 × 10^25 kg (15 Earths)</item>
+        <item>1.02 × 10^26 kg (17 Earths)</item>
+    </string-array>
+    <string-array name="moons">
+        <item>None</item>
+        <item>None</item>
+        <item>1 (The moon)</item>
+        <item>2 (Phobos and Deimos)</item>
+        <item>67 (Io, Europa, Ganymede and Callisto)</item>
+        <item>62 (Titan, Enceladus, Iapetus and Rhea)</item>
+        <item>27 (Miranda, Titania, Ariel, Umbriel and Oberon)</item>
+        <item>14 (Triton)</item>
+    </string-array>
+    <string-array name="orbitD">
+        <item>57,909,227 km (0.39 AU)</item>
+        <item>108,209,475 km (0.73 AU)</item>
+        <item>149,598,262 km (1 AU)</item>
+        <item>227,943,824 km (1.52 AU)</item>
+        <item>778,340,821 km (5.20 AU)</item>
+        <item>1,426,666,422 km (9.54 AU)</item>
+        <item>2,870,658,186 km (19.19 AU)</item>
+        <item>4,498,396,441 km (30.10 AU)</item>
+    </string-array>
+    <string-array name="orbitP">
+        <item>88 days</item>
+        <item>225 days</item>
+        <item>365.26 days</item>
+        <item>687 days (1.9 years)</item>
+        <item>4,333 days (11.9 years)</item>
+        <item>10,756 days (29.5 years)</item>
+        <item>30,687 days (84.0 years)</item>
+        <item>60,190 days (164.8 years)</item>
+    </string-array>
+    <string-array name="temp">
+        <item>-173 to 427°C</item>
+        <item>462 °C</item>
+        <item>-88 to 58°C</item>
+        <item>-153 to 20 °C</item>
+        <item>-148 °C</item>
+        <item>-178 °C</item>
+        <item>-216 °C</item>
+        <item>-214 °C</item>
+    </string-array>
+    <string-array name="record">
+        <item>14th century BC</item>
+        <item>17th century BC</item>
+        <item>None</item>
+        <item>2nd millennium BC</item>
+        <item>7th or 8th century BC</item>
+        <item>8th century BC</item>
+        <item>March 13th 1781</item>
+        <item>September 23rd 1846</item>
+    </string-array>
+    <string-array name="by">
+        <item>Assyrian astronomers</item>
+        <item>Babylonian astronomers</item>
+        <item>None</item>
+        <item>Egyptian astronomers</item>
+        <item>Babylonian astronomers</item>
+        <item>Assyrians</item>
+        <item>William Herschel</item>
+        <item>Urbain Le Verrier and Johann Galle</item>
+    </string-array>
+
     <string name="title_activity_list">ListActivity</string>
     <string name="title_activity_real_home">RealHomeActivity</string>
     <string name="action_settings">Settings</string>
