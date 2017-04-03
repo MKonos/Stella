@@ -131,8 +131,8 @@ public class DisplayPlanet extends AppSettings{
         EquatorialDiameter.setText(diameter[location]);
         Mass.setText(mass[location]);
         Moons.setText(moons[location]);
-        OrbitDistance.setText(planetNames[location]);
-        OrbitPeriod.setText(planetNames[location]);
+        OrbitDistance.setText(distance[location]);
+        OrbitPeriod.setText(period[location]);
         EffectiveTemperature.setText(temp[location]);
         DiscoveryDate.setText(date[location]);
         DiscoveredBy.setText(by[location]);
