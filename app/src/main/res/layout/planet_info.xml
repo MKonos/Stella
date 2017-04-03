@@ -43,9 +43,9 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:text=""
         android:layout_below="@+id/textView"
-        android:text="Equatorial Diameter:" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/textView12"
@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView6"
-        android:text="Effective Temperature:" />
+        android:text="Temperature:" />
 
     <TextView
         android:id="@+id/textView17"
@@ -107,7 +107,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Equatorial Diameter:"
+        android:text="Diameter:"
         android:layout_alignBaseline="@+id/textView11"
         android:layout_alignBottom="@+id/textView11"
         android:layout_alignParentStart="true" />
@@ -152,10 +152,10 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Effective Temperature:"
+        android:text="Temperature:     "
         android:layout_alignBaseline="@+id/textView16"
         android:layout_alignBottom="@+id/textView16"
-        android:layout_alignParentStart="true" />
+        android:layout_toEndOf="@+id/textView11" />
 
     <TextView
         android:id="@+id/textView8"
