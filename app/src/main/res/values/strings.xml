@@ -3,6 +3,7 @@
 
 
     //Planets
+    <string name ="hold">Place holder</string>
     <string-array name="planets">
         <item>Mercury</item>
         <item>Venus</item>
