@@ -1,40 +1,61 @@
-
 package uic.stella.edu.stella;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-
+import android.widget.Toast;
+import android.support.v7.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+//import static uic.stella.edu.stella.AppSettings.APP_SETTINGS;
+import static uic.stella.edu.stella.AppSettings.current_planet;
+
+
 public class ListViewWithImageAndText extends Fragment {
 
-
-    // Array of strings for ListView Title
-    String[] listviewTitle = new String[]{
-            "Jupiter", "Mars", "Mercury", "Neptune",
-            "Saturn", "Earth", "Uranus", "Venus",
-    };
+    //public class ListViewWithImageAnd extends AppSettings {
 
 
-    int[] listviewImage = new int[]{
-            R.drawable.jupiter, R.drawable.mars, R.drawable.mercury, R.drawable.neptune,
-            R.drawable.saturn, R.drawable.earth, R.drawable.uranus, R.drawable.venus,
-    };
+        //private AppSettings app_settings;
 
-    String[] listviewShortDescription = new String[]{
-            "", "", "", "",
-            "", "", "", "",
-    };
+        //controls
+        ListView planetListView;
+
+        //vars
+        String planetSelected;
+
+        // Array of strings for ListView Title
+        String[] listviewTitle = new String[]{
+                "Jupiter", "Mars", "Mercury", "Neptune",
+                "Saturn", "Earth", "Uranus", "Venus",
+        };
+
+
+        int[] listviewImage = new int[]{
+                R.drawable.jupiter, R.drawable.mars, R.drawable.mercury, R.drawable.neptune,
+                R.drawable.saturn, R.drawable.earth, R.drawable.uranus, R.drawable.venus,
+        };
+
+        String[] listviewShortDescription = new String[]{
+                "", "", "", "",
+                "", "", "", "",
+        };
 
    /* @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -59,26 +80,80 @@ public class ListViewWithImageAndText extends Fragment {
         androidListView.setAdapter(simpleAdapter);
     }*/
 
+        //SharedPreferences spAppSettings;
+
+    private View fragmentView;
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.activity_listview_with_image_and_text, container, false);
-        List<HashMap<String, String>> aList = new ArrayList<HashMap<String, String>>();
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.activity_listview_with_image_and_text, container, false);
+            List<HashMap<String, String>> aList = new ArrayList<HashMap<String, String>>();
 
-        for (int i = 0; i < 8; i++) {
-            HashMap<String, String> hm = new HashMap<String, String>();
-            hm.put("listview_title", listviewTitle[i]);
-            hm.put("listview_discription", listviewShortDescription[i]);
-            hm.put("listview_image", Integer.toString(listviewImage[i]));
-            aList.add(hm);
+
+            //app_settings = new AppSettings();
+            //super.onCreate(savedInstanceState);
+            fragmentView = inflater.inflate(R.layout.activity_listview_with_image_and_text, container, false);
+
+            //spAppSettings = app_settings.getSharedPreferences(app_settings.current_planet, Context.MODE_PRIVATE);
+            //final SharedPreferences.Editor editor = (spAppSettings.edit());
+
+
+            planetListView = (ListView) fragmentView.findViewById(R.id.list_view);
+
+
+
+
+
+            for (int i = 0; i < 8; i++) {
+                HashMap<String, String> hm = new HashMap<String, String>();
+                hm.put("listview_title", listviewTitle[i]);
+                hm.put("listview_discription", listviewShortDescription[i]);
+                hm.put("listview_image", Integer.toString(listviewImage[i]));
+                aList.add(hm);
+            }
+
+            //CHANGE THE APP_SETTINGS VALUE
+            //editor.putString(APP_SETTINGS_NUMBER, intNumber.toString());
+            //editor.commit();
+
+            String[] from = {"listview_image", "listview_title", "listview_discription"};
+            int[] to = {R.id.listview_image, R.id.listview_item_title, R.id.listview_item_short_description};
+
+            final ListView androidListView = (ListView) rootView.findViewById(R.id.list_view);
+            androidListView.setAdapter(new SimpleAdapter(getActivity(), aList, R.layout.listview_activity, from, to));
+
+        //planetListView.setAdapter(androidListView);
+
+        androidListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                //planetSelected = planetListView.getItemAtPosition(position).toString();
+
+                //planetSelected = ((ListView) view).toString();
+
+                //LinearLayout ll = (LinearLayout) view;
+                //ListView tv = (ListView) view.findViewById(R.id.list_view);
+                planetSelected = androidListView.getItemAtPosition(position).toString();
+
+                Toast.makeText(getActivity(), planetSelected,
+                        Toast.LENGTH_SHORT).show();
+
+                //Intent i = new Intent(getActivity(), DisplayPlanet.class);
+                //startActivity(i);
+                //((Activity) getActivity()).overridePendingTransition(0,0);
+
+                if (planetSelected.equals("Jupiter")) {
+                    //editor.putString(current_planet, "");
+                    //editor.commit();
+                    Toast.makeText(getActivity(), "THINGGGGG",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+            return rootView;
         }
-
-        String[] from = {"listview_image", "listview_title", "listview_discription"};
-        int[] to = {R.id.listview_image, R.id.listview_item_title, R.id.listview_item_short_description};
-
-        ListView androidListView = (ListView) rootView.findViewById(R.id.list_view);
-        androidListView.setAdapter(new SimpleAdapter(getActivity(), aList, R.layout.listview_activity, from, to));
-        return rootView;
-    }
+    //}
 
 }

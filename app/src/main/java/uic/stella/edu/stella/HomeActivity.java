@@ -1,10 +1,14 @@
 
-/*package uic.stella.edu.stella;
+package uic.stella.edu.stella;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import static uic.stella.edu.stella.R.id.planetList;
 
@@ -12,7 +16,10 @@ import static uic.stella.edu.stella.R.id.planetList;
 public class HomeActivity extends AppCompatActivity {
 
     //controls
-    ListView planetList;
+    ListView planetListView;
+
+    //vars
+    String planetSelected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +28,7 @@ public class HomeActivity extends AppCompatActivity {
 
         setTitle("Pick a Planet!");
 
-        planetList = (ListView) findViewById(R.id.planetList);
+        planetListView = (ListView) findViewById(R.id.planetList);
 
         String[] aryPlanet = getResources().getStringArray(R.array.planets);
 
@@ -31,7 +38,25 @@ public class HomeActivity extends AppCompatActivity {
         setTitle("Planet Select");
 
         //display populated list view
-        planetList.setAdapter(aryAdapter);
+        planetListView.setAdapter(aryAdapter);
+
+        planetListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                //planetSelected = planetListView.getItemAtPosition(position).toString();
+
+                planetSelected = ((TextView) view).getText().toString();
+
+                Toast.makeText(getApplicationContext(), planetSelected,
+                        Toast.LENGTH_SHORT).show();
+
+                //Intent i = new Intent(getActivity(), DisplayPlanet.class);
+                //startActivity(i);
+                //((Activity) getActivity()).overridePendingTransition(0,0);
+            }
+        });
+
+
     }
 }
-*/

@@ -31,6 +31,7 @@ public class DisplayPlanet extends AppSettings{
     TextView DiscoveryDate;
     TextView DiscoveredBy;
     ImageView planetPicture;
+
     SharedPreferences spAppSettings;
 
     int[] listviewImage;
