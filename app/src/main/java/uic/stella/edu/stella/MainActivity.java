@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
 
             switch (position) {
                 case 0:
-                    ListViewWithImageAndText tab1 = new ListViewWithImageAndText();
+                    Diagram tab1 = new Diagram();
                     return tab1;
                 case 1:
                     ListViewWithImageAndText tab2 = new ListViewWithImageAndText();

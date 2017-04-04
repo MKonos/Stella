@@ -43,14 +43,14 @@ public class ListViewWithImageAndText extends Fragment {
 
         // Array of strings for ListView Title
         String[] listviewTitle = new String[]{
-                "Jupiter", "Mars", "Mercury", "Neptune",
-                "Saturn", "Earth", "Uranus", "Venus",
+                "Mercury", "Venus", "Earth", "Mars",
+                "Jupiter", "Saturn", "Uranus", "Neptune",
         };
 
 
         int[] listviewImage = new int[]{
-                R.drawable.jupiter, R.drawable.mars, R.drawable.mercury, R.drawable.neptune,
-                R.drawable.saturn, R.drawable.earth, R.drawable.uranus, R.drawable.venus,
+                R.drawable.mercury, R.drawable.venus, R.drawable.earth, R.drawable.mars, R.drawable.jupiter,
+                R.drawable.saturn, R.drawable.uranus, R.drawable.neptune
         };
 
         String[] listviewShortDescription = new String[]{
@@ -140,13 +140,6 @@ public class ListViewWithImageAndText extends Fragment {
                 Intent myIntent = new Intent(view.getContext(), DisplayPlanet.class);
                 myIntent.putExtra("thePlanet", planetSelected);
                 startActivity(myIntent);
-
-                if (planetSelected.equals("Jupiter")) {
-                    //editor.putString(current_planet, "");
-                    //editor.commit();
-                    Toast.makeText(getActivity(), "THINGGGGG",
-                            Toast.LENGTH_SHORT).show();
-                }
             }
         });
             return rootView;

@@ -32,8 +32,10 @@
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/solar_widget_info"/>
+                android:resource="@xml/solar_widget_info" />
         </receiver>
+
+        <activity android:name=".Diagram"></activity>
     </application>
 
 </manifest>
