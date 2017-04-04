@@ -11,7 +11,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/Theme.AppCompat">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,10 +32,8 @@
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/solar_widget_info" />
+                android:resource="@xml/solar_widget_info"/>
         </receiver>
-
-        <activity android:name=".Diagram"></activity>
     </application>
 
 </manifest>
