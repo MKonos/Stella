@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
                     Diagram tab1 = new Diagram();
                     return tab1;
                 case 1:
-                    ListViewWithImageAndText tab2 = new ListViewWithImageAndText();
+                    GridViewWithImageAndText tab2 = new GridViewWithImageAndText();
                     return tab2;
                 default:
                     return null;
