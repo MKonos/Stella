@@ -21,7 +21,7 @@ import java.util.List;
 
 public class DisplayPlanet extends AppSettings{
 
-// the text fields that we will fill
+    // the text fields that we will fill
     TextView PlanetName;
     TextView EquatorialDiameter;
     TextView Mass;
@@ -53,19 +53,34 @@ public class DisplayPlanet extends AppSettings{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.planet_info);
 
-        spAppSettings = getSharedPreferences(APP_SETTINGS, Context.MODE_PRIVATE);
+        //spAppSettings = getSharedPreferences(APP_SETTINGS, Context.MODE_PRIVATE);
 
         Bundle bundle = getIntent().getExtras();
         myPlanet = bundle.getString("thePlanet");
 
-        setTitle("*SELECTED PLANET*");
+        if(myPlanet.toLowerCase().contains("mercury"))
+            setTitle("Mercury");
+        if(myPlanet.toLowerCase().contains("venus"))
+            setTitle("Venus");
+        if(myPlanet.toLowerCase().contains("earth"))
+            setTitle("Earth");
+        if(myPlanet.toLowerCase().contains("mars"))
+            setTitle("Mars");
+        if(myPlanet.toLowerCase().contains("jupiter"))
+            setTitle("Jupiter");
+        if(myPlanet.toLowerCase().contains("saturn"))
+            setTitle("Saturn");
+        if(myPlanet.toLowerCase().contains("uranus"))
+            setTitle("Uranus");
+        if(myPlanet.toLowerCase().contains("neptune"))
+            setTitle("Neptune");
 
-      //  Toast.makeText(this, message,
-            //    Toast.LENGTH_SHORT).show();
+        //  Toast.makeText(this, message,
+        //    Toast.LENGTH_SHORT).show();
 
-       // final SharedPreferences.Editor editor = (spAppSettings.edit()); // incase we need to change values
+        // final SharedPreferences.Editor editor = (spAppSettings.edit()); // incase we need to change values
 
-       //myPlanet = spAppSettings.getString(current_planet, "");
+        //myPlanet = spAppSettings.getString(current_planet, "");
 
 
         listviewImage = new int[]{

@@ -22,9 +22,6 @@
         <activity
             android:name=".DisplayPlanet"
             android:label="@string/title_activity_display_planet" />
-        <activity
-            android:name=".HomeActivity"
-            android:label="@string/title_activity_home" />
 
         <receiver android:name="layout.SolarWidget">
             <intent-filter>
