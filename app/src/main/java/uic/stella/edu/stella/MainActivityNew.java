@@ -14,39 +14,19 @@ import android.widget.Toast;
     public class MainActivityNew extends Activity {
         GridView grid;
         String[] web = {
-                "Google",
-                "Github",
-                "Instagram",
-                "Facebook",
-                "Flickr",
-                "Pinterest",
-                "Quora",
-                "Twitter",
-                "Vimeo",
-                "WordPress",
-                "Youtube",
-                "Stumbleupon",
-                "SoundCloud",
-                "Reddit",
-                "Blogger"
+                "Earth","Jupiter","Mars","Mercury","Neptune" , "Saturn","Uranus","Venus"
 
         } ;
         int[] imageId = {
-                R.drawable.image1,
-                R.drawable.image2,
-                R.drawable.image3,
-                R.drawable.image4,
-                R.drawable.image5,
-                R.drawable.image6,
-                R.drawable.image7,
-                R.drawable.image8,
-                R.drawable.image9,
-                R.drawable.image10,
-                R.drawable.image11,
-                R.drawable.image12,
-                R.drawable.image13,
-                R.drawable.image14,
-                R.drawable.image15
+                R.drawable.earth,
+                R.drawable.jupiter,
+                R.drawable.mars,
+                R.drawable.mercury,
+                R.drawable.neptune,
+                R.drawable.saturn,
+                R.drawable.uranus,
+                R.drawable.venus,
+
 
         };
 
