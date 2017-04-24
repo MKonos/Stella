@@ -150,6 +150,9 @@ public class MainActivity extends AppCompatActivity {
                 case 1:
                     GridViewWithImageAndText tab2 = new GridViewWithImageAndText();
                     return tab2;
+                case 2:
+                    ListViewWithImageAndText tab3 = new ListViewWithImageAndText();
+                    return tab3;
                 default:
                     return null;
             }
@@ -158,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 2;
+            return 3;
         }
 
         @Override
@@ -168,6 +171,8 @@ public class MainActivity extends AppCompatActivity {
                     return "Diagram";
                 case 1:
                     return "Planet List";
+                case 2:
+                    return "Moon List";
             }
             return null;
         }

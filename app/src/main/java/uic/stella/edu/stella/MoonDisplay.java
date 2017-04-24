@@ -21,6 +21,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import static uic.stella.edu.stella.R.id.container;
+
 //import static uic.stella.edu.stella.AppSettings.APP_SETTINGS;
 
 
@@ -36,6 +38,8 @@ public class MoonDisplay extends AppCompatActivity {
 
     //vars
     String planetSelected;
+
+    SimpleAdapter adapter;
 
     // Array of strings for ListView Title
     String[] gridviewTitle = new String[]{
@@ -69,7 +73,6 @@ public class MoonDisplay extends AppCompatActivity {
         for (int i = 0; i < 8; i++) {
             HashMap<String, String> hm = new HashMap<String, String>();
             hm.put("grid_item_label", gridviewTitle[i]);
-            //hm.put("gridview_discription", gridviewShortDescription[i]);
             hm.put("grid_item_image", Integer.toString(gridviewImage[i]));
             aList.add(hm);
         }
@@ -79,9 +82,11 @@ public class MoonDisplay extends AppCompatActivity {
         String[] from = {"grid_item_image", "grid_item_label"};
         int[] to = {R.id.grid_item_image, R.id.grid_item_label};
 
-        final GridView androidListView = (GridView) findViewById(R.id.moongrid);
+        final GridView moonGridView = (GridView) findViewById(R.id.moongrid);
 
-        androidListView.setAdapter(new SimpleAdapter(this, aList, R.layout.activity_moon_display, from, to));
+        adapter = new SimpleAdapter(moonGridView.getContext(), aList, R.layout.activity_moon_display, from, to);
+
+        moonGridView.setAdapter(adapter);
 
 
         planetGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

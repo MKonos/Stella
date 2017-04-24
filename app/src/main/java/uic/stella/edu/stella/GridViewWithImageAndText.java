@@ -26,7 +26,7 @@ public class GridViewWithImageAndText extends Fragment {
     //private AppSettings app_settings;
 
     //controls
-    GridView planetListView;
+    GridView planetGridView;
 
     //vars
     String planetSelected;
@@ -36,7 +36,6 @@ public class GridViewWithImageAndText extends Fragment {
             "Mercury", "Venus", "Earth", "Mars",
             "Jupiter", "Saturn", "Uranus", "Neptune",
     };
-
 
     int[] gridviewImage = new int[]{
             R.drawable.mercury, R.drawable.venus, R.drawable.earth, R.drawable.mars, R.drawable.jupiter,
@@ -50,7 +49,6 @@ public class GridViewWithImageAndText extends Fragment {
 
     private View fragmentView;
 
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.activity_gridview_with_image_and_text, container, false);
@@ -58,7 +56,7 @@ public class GridViewWithImageAndText extends Fragment {
 
         fragmentView = inflater.inflate(R.layout.activity_gridview_with_image_and_text, container, false);
 
-        planetListView = (GridView) fragmentView.findViewById(R.id.customgrid);
+        planetGridView = (GridView) fragmentView.findViewById(R.id.customgrid);
 
         for (int i = 0; i < 8; i++) {
             HashMap<String, String> hm = new HashMap<String, String>();
@@ -67,13 +65,11 @@ public class GridViewWithImageAndText extends Fragment {
             aList.add(hm);
         }
 
-
         String[] from = {"grid_item_image", "grid_item_label"};
         int[] to = {R.id.grid_item_image, R.id.grid_item_label};
 
         final GridView androidListView = (GridView) rootView.findViewById(R.id.customgrid);
         androidListView.setAdapter(new SimpleAdapter(getActivity(), aList, R.layout.grid_item, from, to));
-
 
         androidListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
