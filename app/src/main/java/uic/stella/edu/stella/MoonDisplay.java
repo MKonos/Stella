@@ -64,7 +64,7 @@ public class MoonDisplay extends AppCompatActivity {
 
         List<HashMap<String, String>> aList = new ArrayList<HashMap<String, String>>();
 
-        planetGridView = (GridView) findViewById(R.id.gridView1);
+        planetGridView = (GridView) findViewById(R.id.moongrid);
 
         for (int i = 0; i < 8; i++) {
             HashMap<String, String> hm = new HashMap<String, String>();
@@ -74,7 +74,7 @@ public class MoonDisplay extends AppCompatActivity {
             aList.add(hm);
         }
 
-        planetGridView.setAdapter(new ImageAdapter(this, gridviewImage));
+        planetGridView.setAdapter(new ImageAdapter(this, gridviewTitle));
 
         //String[] from = {"gridview_image", "gridview_title", "gridview_discription"};
         //int[] to = {R.id.listview_image, R.id.listview_item_title, R.id.listview_item_short_description};
@@ -93,72 +93,4 @@ public class MoonDisplay extends AppCompatActivity {
             }
         });
     }
-}
-
-public class ImageAdapter extends BaseAdapter {
-    private Context context;
-    private final String[] mobileValues;
-
-    public ImageAdapter(Context context, String[] mobileValues) {
-        this.context = context;
-        this.mobileValues = mobileValues;
-    }
-
-    public View getView(int position, View convertView, ViewGroup parent) {
-
-        LayoutInflater inflater = (LayoutInflater) context
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-        View gridView;
-
-        if (convertView == null) {
-
-            gridView = new View(context);
-
-            // get layout from mobile.xml
-            gridView = inflater.inflate(R.layout.mobile, null);
-
-            // set value into textview
-            TextView textView = (TextView) gridView
-                    .findViewById(R.id.grid_item_label);
-            textView.setText(mobileValues[position]);
-
-            // set image based on selected text
-            ImageView imageView = (ImageView) gridView
-                    .findViewById(R.id.grid_item_image);
-
-            String mobile = mobileValues[position];
-
-            if (mobile.equals("Windows")) {
-                imageView.setImageResource(R.drawable.windows_logo);
-            } else if (mobile.equals("iOS")) {
-                imageView.setImageResource(R.drawable.ios_logo);
-            } else if (mobile.equals("Blackberry")) {
-                imageView.setImageResource(R.drawable.blackberry_logo);
-            } else {
-                imageView.setImageResource(R.drawable.android_logo);
-            }
-
-        } else {
-            gridView = (View) convertView;
-        }
-
-        return gridView;
-    }
-
-    @Override
-    public int getCount() {
-        return mobileValues.length;
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return null;
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return 0;
-    }
-
 }

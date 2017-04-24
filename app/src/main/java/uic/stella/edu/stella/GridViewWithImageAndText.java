@@ -53,42 +53,44 @@ public class GridViewWithImageAndText extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.activity_gridview_with_image_and_text, container, false);
-            List<HashMap<String, String>> aList = new ArrayList<HashMap<String, String>>();
+        View rootView = inflater.inflate(R.layout.activity_gridview_with_image_and_text, container, false);
+        List<HashMap<String, String>> aList = new ArrayList<HashMap<String, String>>();
 
-            fragmentView = inflater.inflate(R.layout.activity_gridview_with_image_and_text, container, false);
+        fragmentView = inflater.inflate(R.layout.activity_listview_with_image_and_text, container, false);
 
-            planetListView = (GridView) fragmentView.findViewById(R.id.customgrid);
+        planetListView = (GridView) fragmentView.findViewById(R.id.customgrid);
 
-            for (int i = 0; i < 8; i++) {
-                HashMap<String, String> hm = new HashMap<String, String>();
-                hm.put("grid_item_label", gridviewTitle[i]);
-                hm.put("grid_item_image", Integer.toString(gridviewImage[i]));
-                aList.add(hm);
-            }
+        for (int i = 0; i < 8; i++) {
+            HashMap<String, String> hm = new HashMap<String, String>();
+            hm.put("listview_title", gridviewTitle[i]);
+            hm.put("listview_discription", gridviewShortDescription[i]);
+            hm.put("listview_image", Integer.toString(gridviewImage[i]));
+            aList.add(hm);
 
 
-            String[] from = {"grid_item_image", "grid_item_label"};
-            int[] to = {R.id.grid_item_image, R.id.grid_item_label};
+            String[] from = {"listview_image", "listview_title", "listview_discription"};
+            int[] to = {R.id.listview_image, R.id.listview_item_title, R.id.listview_item_short_description};
 
             final GridView androidListView = (GridView) rootView.findViewById(R.id.customgrid);
-            androidListView.setAdapter(new SimpleAdapter(getActivity(), aList, R.layout.grid_item, from, to));
+            androidListView.setAdapter(new SimpleAdapter(getActivity(), aList, R.layout.listview_activity, from, to));
 
 
-        androidListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            androidListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
 
-                planetSelected = androidListView.getItemAtPosition(position).toString();
+                    planetSelected = androidListView.getItemAtPosition(position).toString();
 
-                Intent myIntent = new Intent(view.getContext(), DisplayPlanet.class);
-                myIntent.putExtra("thePlanet", planetSelected);
-                startActivity(myIntent);
-            }
-        });
-            return rootView;
+                    Intent myIntent = new Intent(view.getContext(), DisplayPlanet.class);
+                    myIntent.putExtra("thePlanet", planetSelected);
+                    startActivity(myIntent);
+                }
+            });
+            //return rootView;
         }
-    //}
+        //}
 
+        return rootView;
+    }
 }
