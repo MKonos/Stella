@@ -18,7 +18,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".DisplayPlanet"
             android:label="@string/title_activity_display_planet" />
@@ -30,8 +29,10 @@
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/solar_widget_info"/>
+                android:resource="@xml/solar_widget_info" />
         </receiver>
+
+        <activity android:name=".MoonDisplay"></activity>
     </application>
 
 </manifest>

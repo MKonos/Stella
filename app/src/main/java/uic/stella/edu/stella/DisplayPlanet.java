@@ -1,12 +1,14 @@
 package uic.stella.edu.stella;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -32,6 +34,7 @@ public class DisplayPlanet extends AppSettings{
     TextView DiscoveryDate;
     TextView DiscoveredBy;
     ImageView planetPicture;
+    Button moonButton;
 
     SharedPreferences spAppSettings;
 
@@ -57,23 +60,9 @@ public class DisplayPlanet extends AppSettings{
 
         Bundle bundle = getIntent().getExtras();
         myPlanet = bundle.getString("thePlanet");
+        final String planetText = "";
 
-        if(myPlanet.toLowerCase().contains("mercury"))
-            setTitle("Mercury");
-        if(myPlanet.toLowerCase().contains("venus"))
-            setTitle("Venus");
-        if(myPlanet.toLowerCase().contains("earth"))
-            setTitle("Earth");
-        if(myPlanet.toLowerCase().contains("mars"))
-            setTitle("Mars");
-        if(myPlanet.toLowerCase().contains("jupiter"))
-            setTitle("Jupiter");
-        if(myPlanet.toLowerCase().contains("saturn"))
-            setTitle("Saturn");
-        if(myPlanet.toLowerCase().contains("uranus"))
-            setTitle("Uranus");
-        if(myPlanet.toLowerCase().contains("neptune"))
-            setTitle("Neptune");
+
 
         //  Toast.makeText(this, message,
         //    Toast.LENGTH_SHORT).show();
@@ -102,6 +91,38 @@ public class DisplayPlanet extends AppSettings{
         assignValues();
         int location = locationInArray();
         printValues(location);
+
+        if(myPlanet.toLowerCase().contains("mercury")) {
+            setTitle("Mercury");
+            moonButton.setVisibility(View.INVISIBLE);
+        }
+        if(myPlanet.toLowerCase().contains("venus")) {
+            setTitle("Venus");
+            moonButton.setVisibility(View.INVISIBLE);
+        }
+        if(myPlanet.toLowerCase().contains("earth"))
+            setTitle("Earth");
+        if(myPlanet.toLowerCase().contains("mars"))
+            setTitle("Mars");
+        if(myPlanet.toLowerCase().contains("jupiter"))
+            setTitle("Jupiter");
+        if(myPlanet.toLowerCase().contains("saturn"))
+            setTitle("Saturn");
+        if(myPlanet.toLowerCase().contains("uranus"))
+            setTitle("Uranus");
+        if(myPlanet.toLowerCase().contains("neptune"))
+            setTitle("Neptune");
+
+        moonButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent switchActivity = new Intent(DisplayPlanet.this, MoonDisplay.class);
+                switchActivity.putExtra("planet", planetText);
+                switchActivity.putExtra("mode", 1);
+                startActivity(switchActivity);
+            }
+        });
     }
 
     public void assignValues()
@@ -116,6 +137,7 @@ public class DisplayPlanet extends AppSettings{
         EffectiveTemperature = (TextView) findViewById(R.id.textView25);
         DiscoveryDate = (TextView) findViewById(R.id.textView26);
         DiscoveredBy = (TextView) findViewById(R.id.textView27);
+        moonButton = (Button) findViewById(R.id.button);
     }
 
     public int locationInArray()

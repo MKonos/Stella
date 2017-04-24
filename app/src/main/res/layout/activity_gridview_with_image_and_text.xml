@@ -1,15 +1,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
 	android:textColor="@android:color/white"
     android:background="#000000">
- 
-    <GridView
-        android:id="@+id/customgrid"
-		android:textColor="@android:color/white"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="2" />
+
+	<GridView
+		android:id="@+id/customgrid"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:numColumns="2"
+		android:textColor="@android:color/white"/>
  
 </RelativeLayout> 
