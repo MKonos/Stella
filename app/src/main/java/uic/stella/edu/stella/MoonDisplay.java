@@ -68,18 +68,21 @@ public class MoonDisplay extends AppCompatActivity {
 
         for (int i = 0; i < 8; i++) {
             HashMap<String, String> hm = new HashMap<String, String>();
-            hm.put("gridview_title", gridviewTitle[i]);
-            hm.put("gridview_discription", gridviewShortDescription[i]);
-            hm.put("gridview_image", Integer.toString(gridviewImage[i]));
+            hm.put("grid_item_label", gridviewTitle[i]);
+            //hm.put("gridview_discription", gridviewShortDescription[i]);
+            hm.put("grid_item_image", Integer.toString(gridviewImage[i]));
             aList.add(hm);
         }
 
-        planetGridView.setAdapter(new ImageAdapter(this, gridviewTitle));
+        //planetGridView.setAdapter(new ImageAdapter(this, gridviewTitle));
 
-        //String[] from = {"gridview_image", "gridview_title", "gridview_discription"};
-        //int[] to = {R.id.listview_image, R.id.listview_item_title, R.id.listview_item_short_description};
+        String[] from = {"grid_item_image", "grid_item_label"};
+        int[] to = {R.id.grid_item_image, R.id.grid_item_label};
 
-        //final GridView androidGridView = (GridView) findViewById(R.id.moongrid);
+        final GridView androidListView = (GridView) findViewById(R.id.moongrid);
+
+        androidListView.setAdapter(new SimpleAdapter(this, aList, R.layout.activity_moon_display, from, to));
+
 
         planetGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
