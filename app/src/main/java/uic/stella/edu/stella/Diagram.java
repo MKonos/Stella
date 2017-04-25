@@ -50,8 +50,8 @@ public class Diagram extends Fragment {
         private static final int DONE = 0;
         private static final int RUNNING = 1;
 
-        private static final int ORBIT_COLOR = Color.argb(0, 66, 66, 66);
-        private static final int PLANET_COLOR = Color.argb(0, 0, 0, 0);
+        private static final int ORBIT_COLOR = Color.argb(255, 255,255,255);
+        private static final int PLANET_COLOR = Color.argb(255, 255,255,255);
         private static final int SUN_COLOR = Color.argb(255, 255, 0, 0);
         private static final int nsteps = 600;                 // Number animation steps around circle
         private static final int planetRadius = 6;             // Radius of each planet (pixels)
