@@ -26,20 +26,20 @@ public class GridViewWithImageAndText extends Fragment {
     //private AppSettings app_settings;
 
     //controls
-    GridView planetGridView;
+    GridView planetListView;
 
     //vars
     String planetSelected;
 
     // Array of strings for ListView Title
-    String[] gridviewTitle = new String[]{
-            "Mercury", "Venus", "Earth", "Mars",
-            "Jupiter", "Saturn", "Uranus", "Neptune",
+    public String[] gridviewTitle = new String[]{
+            "Earth", "Jupiter",  "Mars","Mercury", "Neptune","Saturn", "Uranus","Venus"
     };
 
-    int[] gridviewImage = new int[]{
-            R.drawable.mercury, R.drawable.venus, R.drawable.earth, R.drawable.mars, R.drawable.jupiter,
-            R.drawable.saturn, R.drawable.uranus, R.drawable.neptune
+
+    Integer[] gridviewImage = new Integer[]{
+            R.drawable.earth, R.drawable.jupiter, R.drawable.mars, R.drawable.mercury, R.drawable.neptune,
+            R.drawable.saturn, R.drawable.uranus, R.drawable.venus
     };
 
     String[] gridviewShortDescription = new String[]{
@@ -49,6 +49,7 @@ public class GridViewWithImageAndText extends Fragment {
 
     private View fragmentView;
 
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.activity_gridview_with_image_and_text, container, false);
@@ -56,7 +57,7 @@ public class GridViewWithImageAndText extends Fragment {
 
         fragmentView = inflater.inflate(R.layout.activity_gridview_with_image_and_text, container, false);
 
-        planetGridView = (GridView) fragmentView.findViewById(R.id.customgrid);
+        planetListView = (GridView) fragmentView.findViewById(R.id.customgrid);
 
         for (int i = 0; i < 8; i++) {
             HashMap<String, String> hm = new HashMap<String, String>();
@@ -65,11 +66,13 @@ public class GridViewWithImageAndText extends Fragment {
             aList.add(hm);
         }
 
+
         String[] from = {"grid_item_image", "grid_item_label"};
         int[] to = {R.id.grid_item_image, R.id.grid_item_label};
 
         final GridView androidListView = (GridView) rootView.findViewById(R.id.customgrid);
         androidListView.setAdapter(new SimpleAdapter(getActivity(), aList, R.layout.grid_item, from, to));
+
 
         androidListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
