@@ -18,7 +18,7 @@ import java.util.List;
 //import static uic.stella.edu.stella.AppSettings.APP_SETTINGS;
 
 
-public class ListViewWithImageAndText extends Fragment {
+public class GridViewWithImageAndText extends Fragment {
 
     //public class ListViewWithImageAnd extends AppSettings {
 
@@ -33,21 +33,18 @@ public class ListViewWithImageAndText extends Fragment {
 
     // Array of strings for ListView Title
     String[] gridviewTitle = new String[]{
-            "Ariel", "Dione", "Hyperion", "Iapetus",
-            "Luna", "Miranda", "Oberon", "Rhea",
-            "Tethys","Titan","Titania","Triton","Umbriel",
+            "Mercury", "Venus", "Earth", "Mars",
+            "Jupiter", "Saturn", "Uranus", "Neptune",
     };
 
     int[] gridviewImage = new int[]{
-            R.drawable.ariel, R.drawable.dione, R.drawable.hyperion, R.drawable.iapetus, R.drawable.luna,
-            R.drawable.miranda, R.drawable.oberon, R.drawable.rhea, R.drawable.tethys, R.drawable.titan
-            , R.drawable.titania, R.drawable.triton , R.drawable.umbriel
+            R.drawable.mercury, R.drawable.venus, R.drawable.earth, R.drawable.mars, R.drawable.jupiter,
+            R.drawable.saturn, R.drawable.uranus, R.drawable.neptune
     };
 
     String[] gridviewShortDescription = new String[]{
             "1", "2", "3", "4",
             "5", "6", "7", "8",
-            "9", "10", "11", "12", "13",
     };
 
     private View fragmentView;
@@ -61,7 +58,7 @@ public class ListViewWithImageAndText extends Fragment {
 
         planetGridView = (GridView) fragmentView.findViewById(R.id.customgrid);
 
-        for (int i = 0; i < 13; i++) {
+        for (int i = 0; i < 8; i++) {
             HashMap<String, String> hm = new HashMap<String, String>();
             hm.put("grid_item_label", gridviewTitle[i]);
             hm.put("grid_item_image", Integer.toString(gridviewImage[i]));

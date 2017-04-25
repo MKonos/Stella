@@ -4,12 +4,12 @@
     android:orientation="vertical"
     android:background="#000000"
 
-    >
-
+	>
+ 
     <GridView
         android:id="@+id/customgrid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:numColumns="2" />
-
-</RelativeLayout>
+ 
+</RelativeLayout> 
