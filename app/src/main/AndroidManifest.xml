@@ -32,7 +32,6 @@
                 android:resource="@xml/solar_widget_info" />
         </receiver>
 
-        <activity android:name=".MoonDisplay"></activity>
     </application>
 
 </manifest>

@@ -33,18 +33,21 @@ public class ListViewWithImageAndText extends Fragment {
 
     // Array of strings for ListView Title
     String[] gridviewTitle = new String[]{
-            "Mercury", "Venus", "Earth", "Mars",
-            "Jupiter", "Saturn", "Uranus", "Neptune",
+            "Ariel", "Dione", "Hyperion", "Iapetus",
+            "Luna", "Miranda", "Oberon", "Rhea",
+            "Tethys","Titan","Titania","Triton","Umbriel",
     };
 
     int[] gridviewImage = new int[]{
-            R.drawable.mercury, R.drawable.venus, R.drawable.earth, R.drawable.mars, R.drawable.jupiter,
-            R.drawable.saturn, R.drawable.uranus, R.drawable.neptune
+            R.drawable.ariel, R.drawable.dione, R.drawable.hyperion, R.drawable.iapetus, R.drawable.luna,
+            R.drawable.miranda, R.drawable.oberon, R.drawable.rhea, R.drawable.tethys, R.drawable.titan
+            , R.drawable.titania, R.drawable.triton , R.drawable.umbriel
     };
 
     String[] gridviewShortDescription = new String[]{
             "1", "2", "3", "4",
             "5", "6", "7", "8",
+            "9", "10", "11", "12", "13",
     };
 
     private View fragmentView;
@@ -58,7 +61,7 @@ public class ListViewWithImageAndText extends Fragment {
 
         planetGridView = (GridView) fragmentView.findViewById(R.id.customgrid);
 
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 13; i++) {
             HashMap<String, String> hm = new HashMap<String, String>();
             hm.put("grid_item_label", gridviewTitle[i]);
             hm.put("grid_item_image", Integer.toString(gridviewImage[i]));

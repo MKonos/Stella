@@ -31,8 +31,7 @@ public class DisplayMoon extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        gv=(GridView) findViewById(R.id.moongrid);
-        //gv.setAdapter(new DisplayPlanet(this, gridviewTitle,gridviewImage));  // this brakes the build 
+        //gv.setAdapter(new DisplayPlanet(this, gridviewTitle,gridviewImage));  // this brakes the build
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

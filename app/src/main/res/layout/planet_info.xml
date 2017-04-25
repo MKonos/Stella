@@ -25,257 +25,245 @@
 
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Planet Name:"
-        android:layout_marginTop="26dp"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/imageView"
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="26dp"
+        android:text="Other Name:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:textColor ="#FFFFFF"
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView2"
-        android:text="Mass:" />
+        android:layout_below="@+id/textView"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:text="Moons:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:layout_below="@+id/textView3"
-        android:text="Moons:" />
+        android:layout_alignParentStart="true" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView5"
-        android:text="Orbit Period:" />
+        android:text="Orbit Period:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView6"
-        android:text="Temperature:" />
+        android:text="Temperature:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView7"
-        android:text="Discovery Date:" />
+        android:text="Discovery Date:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView8"
-        android:text="Discovered By:" />
+        android:text="Discovered By:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Diameter:"
-        android:layout_alignBaseline="@+id/textView11"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:layout_alignBottom="@+id/textView11"
-        android:layout_alignParentStart="true" />
+        android:layout_toEndOf="@+id/textView11" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mass:"
-        android:layout_alignBaseline="@+id/textView12"
-        android:layout_alignBottom="@+id/textView12"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_below="@+id/textView11"
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:textColor ="#FFFFFF"
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Moons:"
-        android:layout_alignBaseline="@+id/textView13"
-        android:layout_alignBottom="@+id/textView13"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Orbit Distance:"
         android:layout_alignBaseline="@+id/textView23"
         android:layout_alignBottom="@+id/textView23"
         android:layout_alignEnd="@+id/textView17"
-        android:layout_toEndOf="@+id/textView11" />
+        android:layout_toEndOf="@+id/textView11"
+        android:text="Orbit Distance:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Orbit Period:"
         android:layout_alignBaseline="@+id/textView15"
         android:layout_alignBottom="@+id/textView15"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:text="Orbit Period:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Temperature:    "
         android:layout_alignBaseline="@+id/textView16"
         android:layout_alignBottom="@+id/textView16"
-        android:layout_toEndOf="@+id/textView11" />
+        android:layout_toEndOf="@+id/textView11"
+        android:text="Temperature:    "
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Discovery Date:  "
         android:layout_alignBaseline="@+id/textView17"
         android:layout_alignBottom="@+id/textView17"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:text="Discovery Date:  "
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Discovered By:"
         android:layout_alignBaseline="@+id/textView18"
         android:layout_alignBottom="@+id/textView18"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:text="Discovered By:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hold"
         android:layout_alignBaseline="@+id/textView"
         android:layout_alignBottom="@+id/textView"
-        android:layout_alignStart="@+id/textView20" />
+        android:layout_alignStart="@+id/textView20"
+        android:text="@string/hold"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hold"
+        android:layout_alignStart="@+id/textView21"
         android:layout_below="@+id/textView19"
-        android:layout_alignStart="@+id/textView21" />
+        android:text="@string/hold"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hold"
+        android:layout_alignStart="@+id/textView22"
         android:layout_below="@+id/textView20"
-        android:layout_alignStart="@+id/textView22" />
+        android:text="@string/hold"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hold"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:layout_below="@+id/textView21"
         android:layout_alignStart="@+id/textView23" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="@string/hold"
-        android:layout_marginTop="18dp"
-        android:layout_below="@+id/textView22"
-        android:layout_alignParentEnd="true"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_below="@+id/textView13"
         android:layout_alignStart="@+id/textView24" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hold"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:layout_below="@+id/textView23"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/textView7"
         android:layout_alignStart="@+id/textView25" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hold"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:layout_below="@+id/textView24"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/textView8" />
+        android:layout_alignStart="@+id/textView26" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hold"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:layout_below="@+id/textView25"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/textView8" />
+        android:layout_toEndOf="@+id/textView8"
+        android:layout_marginStart="28dp" />
 
     <TextView
-        android:textColor ="#FFFFFF"
         android:id="@+id/textView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hold"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:layout_below="@+id/textView26"
-        android:layout_alignEnd="@+id/textView26"
-        android:layout_toEndOf="@+id/textView8" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView27"
-        android:layout_below="@+id/textView27"
-        android:layout_marginStart="38dp"
-        android:text="See Moons" />
+        android:layout_alignStart="@+id/textView26" />
 
 
 </RelativeLayout>
