@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="@android:color/background_dark">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_weight="0.04"
+        android:layout_x="181dp"
+        android:layout_y="237dp"
+        android:background="@android:color/background_dark"
+        app:srcCompat="@drawable/mercury" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="25dp"
+        android:layout_height="22dp"
+        android:layout_weight="0.04"
+        android:layout_x="178dp"
+        android:layout_y="212dp"
+        android:background="@android:color/background_dark"
+        app:srcCompat="@drawable/venus" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="23dp"
+        android:layout_height="22dp"
+        android:layout_weight="0.04"
+        android:layout_x="178dp"
+        android:layout_y="187dp"
+        android:background="@android:color/background_dark"
+        app:srcCompat="@drawable/earth" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="21dp"
+        android:layout_height="20dp"
+        android:layout_weight="0.04"
+        android:layout_x="178dp"
+        android:layout_y="160dp"
+        android:background="@android:color/background_dark"
+        app:srcCompat="@drawable/mars" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="44dp"
+        android:layout_height="38dp"
+        android:layout_weight="0.04"
+        android:layout_x="166dp"
+        android:layout_y="118dp"
+        android:background="@android:color/background_dark"
+        app:srcCompat="@drawable/jupiter" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_weight="0.04"
+        android:layout_x="164dp"
+        android:layout_y="79dp"
+        android:background="@android:color/background_dark"
+        app:srcCompat="@drawable/saturn" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="23dp"
+        android:layout_height="22dp"
+        android:layout_weight="0.04"
+        android:layout_x="176dp"
+        android:layout_y="28dp"
+        android:background="@android:color/background_dark"
+        app:srcCompat="@drawable/neptune" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="26dp"
+        android:layout_height="24dp"
+        android:layout_weight="0.04"
+        android:layout_x="176dp"
+        android:layout_y="54dp"
+        android:background="@android:color/background_dark"
+        app:srcCompat="@drawable/uranus" />
+
+</AbsoluteLayout>
